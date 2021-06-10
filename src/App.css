@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  height: 100vh;
+  overflow-x: hidden;
+  position: absolute;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.projects {
+  white-space: nowrap;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0px;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.project {
+  display: inline-block;
+  width: 100vw;
+  scroll-snap-align: start;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  box-sizing: border-box;
+}
+/* .project::-webkit-scrollbar {
+  display: none;
+} */
+.project:nth-child(1) {
+  background-image: url(./img/bg1.png);
+}
+.project:nth-child(2) {
+  background-image: url(./img/bg2.png);
+}
+.project:nth-child(3) {
+  background-image: url(./img/bg3.png);
 }
 
-.App-link {
-  color: #61dafb;
+.text {
+  margin-top: 136px;
+  padding-left: 66px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text__hello {
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 32px;
+  display: block;
+  padding-bottom: 30px;
+}
+
+.text__main {
+  font-weight: 400;
+  font-size: 91px;
+  letter-spacing: 15px;
+}
+
+.text__not {
+  font-weight: 800;
+}
+
+.text__img {
+  position: relative;
+  bottom: 395px;
+  left: 424px;
+  height: 100px;
 }
