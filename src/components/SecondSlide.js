@@ -3,7 +3,7 @@ import Header from "./Header";
 
 function SecondSlide() {
   return (
-    <section className="project">
+    <section className="project" id="second">
       <Header />
     </section>
   );
