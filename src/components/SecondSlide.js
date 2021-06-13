@@ -2,28 +2,28 @@ import React, { useState, useEffect, createRef, onScroll } from "react";
 import Header from "./Header";
 import "../css/Second.css";
 import Onpoint from "./Onppoint";
+import second_sperms from "../img/second_sperms.png";
 
 function SecondSlide() {
   const myRef = createRef();
-  /*   const [state, setState] = useState({ scrollTop: 0 });
+  /*   const [state, setState] = useState({ value: 0 }); */
 
-  const onTouchMove = () => {
+  /*   const onTouchMove = () => {
     const scrollTop = myRef.current.scrollTop;
     setState({
       scrollTop: scrollTop,
     });
     console.log(scrollTop);
-  }; */
+  };  */
 
   const handleChange = (e) => {
-    let value = e.target.value;
-    console.log(value);
-    const percent = value / 100;
+    let scroll = e.target.value;
+    const percent = scroll / 100;
     const height = myRef.current.scrollHeight;
     const scrollTop = myRef.current.scrollTop;
     const change = (height - scrollTop) * percent;
     console.log(change);
-    const elementPosition = myRef.current.getBoundingClientRect().top + 35;
+    const elementPosition = myRef.current.getBoundingClientRect().top + 105;
     let offsetPosition = elementPosition - scrollTop;
     myRef.current.scrollBy({
       top: offsetPosition,
@@ -31,8 +31,20 @@ function SecondSlide() {
     });
   };
 
-  useEffect(() => {}, [myRef]);
+  /*   let scroll = document.querySelector(".range");
+  let panel = document.querySelector(".spermtext");
 
+  let total = panel.scrollHeight - panel.offsetHeight;
+  var percentage = total * (value / 100);
+  var percentageWidth = total / 10;
+
+  scroll.onInput = function () {
+    panel = document.querySelector(".spermtext");
+    let total = panel.scrollHeight - panel.offsetHeight;
+    percentage = total * (value / 100);
+    panel.scrollBy = percentage;
+  };
+ */
   return (
     <section className="project" id="second">
       <Header />
@@ -84,6 +96,7 @@ function SecondSlide() {
           </p>
         </div>
       </div>
+      <img src={second_sperms} alt="sperms" className="second_sperms" />
       <Onpoint />
     </section>
   );
