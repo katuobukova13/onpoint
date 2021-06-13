@@ -1,0 +1,64 @@
+.bubble {
+  position: absolute;
+}
+
+.bubble__1 {
+  left: 2240px;
+  top: 112px;
+  width: 136px;
+  height: 35px;
+  width: 35px;
+}
+
+.bubble__2 {
+  left: 2225px;
+  top: 200px;
+  height: 70px;
+  width: 70px;
+  z-index: 6;
+}
+
+.pink__1 {
+  left: 2130px;
+  top: 250px;
+  height: 33px;
+  width: 33px;
+}
+
+.pink__2 {
+  left: 2230px;
+  top: 350px;
+  height: 110px;
+  width: 110px;
+}
+
+.bubble__3 {
+  left: 2060px;
+  top: 455px;
+  width: 136px;
+  height: 33px;
+  width: 33px;
+}
+
+.pink__3 {
+  left: 2070px;
+  top: 550px;
+  height: 75px;
+  width: 75px;
+  z-index: 61;
+}
+
+.bubble__4 {
+  left: 2275px;
+  top: 595px;
+  height: 68px;
+  width: 68px;
+}
+
+.bubble__5 {
+  left: 2230px;
+  bottom: 0;
+  height: 65px;
+  width: 150px;
+  z-index: 62;
+}

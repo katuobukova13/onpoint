@@ -4,6 +4,7 @@ import Onpoint from "./Onppoint";
 import Button from "./Button";
 import bottle from "../img/bottle.png";
 import "../css/Third.css";
+import Bubbles from "./Bubbles";
 
 function ThirdSlide() {
   return (
@@ -11,9 +12,9 @@ function ThirdSlide() {
       <Header />
       <img src={bottle} alt="bottle" className="bottle" />
       <div className="third__titles">
-        <h2>КЛЮЧЕВОЕ СООБЩЕНИЕ</h2>
-        <h1>
-          BREND <span>X Y </span>
+        <h2 className="third__title">КЛЮЧЕВОЕ СООБЩЕНИЕ</h2>
+        <h1 className="third__title">
+          BREND <span>XY</span>
         </h1>
       </div>
       <div className="third__blocks">
@@ -24,6 +25,7 @@ function ThirdSlide() {
         <div className="third__block">Курс лечения от 7 дней до 1 мес.</div>
       </div>
       <Button value={"Подробнее"} id="btn__third" />
+      <Bubbles />
       <Onpoint />
     </section>
   );

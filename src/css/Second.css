@@ -14,8 +14,7 @@
   background: #fff;
   margin-left: 66px;
   border: 1px solid #fff;
-  -webkit-box-shadow: -1px 0px 4px 0px rgba(34, 60, 80, 0.32);
-  box-shadow: -1px 0px 4px 0px rgba(34, 60, 80, 0.32);
+  box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
   border-radius: 50px;
   padding-top: 25px;
   padding-left: 35px;
@@ -42,7 +41,7 @@
 }
 
 input[type="range"] {
-  transform: rotate(270deg);
+  transform: rotate(90deg);
   -webkit-appearance: none;
   width: 44%;
   top: 230px;

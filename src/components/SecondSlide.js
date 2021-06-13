@@ -1,80 +1,47 @@
-import React, { useState, useEffect, createRef, onScroll } from "react";
+import React, { useState, useEffect, useRef, onScroll } from "react";
 import Header from "./Header";
 import "../css/Second.css";
 import Onpoint from "./Onppoint";
 import second_sperms from "../img/second_sperms.png";
 
+const MAX_SCROLL_VALUE = 100;
+
 function SecondSlide() {
-  const myRef = createRef();
-  /*   const sectionRef = createRef();
-  const [img, setImg] = useState({ img: "" }); */
+  const myRef = useRef();
+  const [inputState, setInputState] = useState(0);
 
-  /*   const onTouchMove = () => {
-    const scrollTop = myRef.current.scrollTop;
-    setState({
-      scrollTop: scrollTop,
+  const handleChange = (e) => {
+    let value = e.target.value;
+    const {
+      scrollHeight: containerScrollHeight,
+      offsetHeight: containerOffsetHeight,
+      scrollTop: containerScrollTop,
+    } = myRef.current;
+
+    const scrollValue =
+      (containerScrollHeight - containerOffsetHeight) *
+      (value / MAX_SCROLL_VALUE);
+
+    const scrollDifference = Math.ceil(scrollValue - containerScrollTop);
+
+    console.log({
+      step: containerScrollHeight / MAX_SCROLL_VALUE,
+      maxScroll: containerScrollHeight - containerOffsetHeight,
+      value,
+      currentScroll: containerScrollTop,
+      scrollBy: scrollDifference,
     });
-    console.log(scrollTop);
-  };  */
 
-  /*   useEffect(() => {
-    console.log(getComputedStyle(sectionRef.current));
-  }, []); */
-
-  const handleRange = (e) => {
-    let scroll = e.target.value;
-    const percent = scroll / 100;
-    const height = myRef.current.scrollHeight;
-    const scrollTop = myRef.current.scrollTop;
-    const change = (height - scrollTop) * percent;
-    console.log(change);
-    const elementPosition = myRef.current.getBoundingClientRect().top + 105;
-    let offsetPosition = elementPosition - scrollTop;
     myRef.current.scrollBy({
-      top: offsetPosition,
+      top: scrollDifference,
       behavior: "smooth",
     });
+
+    setInputState(value);
   };
 
-  /*   let scroll = document.querySelector(".range");
-  let panel = document.querySelector(".spermtext");
-
-  let total = panel.scrollHeight - panel.offsetHeight;
-  var percentage = total * (value / 100);
-  var percentageWidth = total / 10;
-
-  scroll.onInput = function () {
-    panel = document.querySelector(".spermtext");
-    let total = panel.scrollHeight - panel.offsetHeight;
-    percentage = total * (value / 100);
-    panel.scrollBy = percentage;
-  };
- */
-
-  /*   const startStopAnimation = () => {
-    1024 < document.scrollWidth() && document.scrollWidth() < 2048 ? (
-      <img src={second_sperms} alt="sperms" className="second_sperms" />
-    ) : (
-      <></>
-    );
-  }; */
-
-  /*   setImg(
-    document.scrollWidth() > 1024 && document.scrollWidth() < 2048
-      ? true
-      : false
-  );
-  console.log(img); */
-  /*
-  useEffect(() => startStopAnimation(), []);
- */
   return (
-    <section
-      className="project"
-      id="second"
-      /*    ref={sectionRef} */
-      /*       startStopAnimation={startStopAnimation} */
-    >
+    <section className="project" id="second">
       <Header />
       <div className="title">
         <p className="title__text">Текст</p>
@@ -84,11 +51,9 @@ function SecondSlide() {
         <input
           type="range"
           className="range"
-          min="0"
-          max="10"
-          step="0.01"
-          onInput={handleRange}
-          /*           onTouchMove={onTouchMove} */
+          onInput={handleChange}
+          value={inputState}
+          max={MAX_SCROLL_VALUE}
         />
         <div className="spermtext" ref={myRef}>
           <p className="spermtext__paragraph">
