@@ -28,6 +28,27 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "DIN Pro";
+  src: local("DIN-Pro"), local("DIN Pro"), url("./fonts/DIN-Pro/din_pro.eot"),
+    url("./fonts/DIN-Pro/din_pro.woff2") format("woff2"),
+    url("./fonts/DIN-Pro/din_pro.woff") format("woff"),
+    url("./fonts//DIN-Pro/din_pro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Pro";
+  src: local("DIN-Pro-Bold"), local("DIN Pro Bold"),
+    url("./fonts/DIN-Pro-Bold/din_pro_bold.eot"),
+    url("./fonts/DIN-Pro-Bold/din_pro_bold.woff2") format("woff2"),
+    url("./fonts/DIN-Pro-Bold/din_pro_bold.woff") format("woff"),
+    url("./fonts//DIN-Pro-Bold/din_pro_bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;

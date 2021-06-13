@@ -1,12 +1,11 @@
 import React from "react";
-import "../Button.css";
+import "../css/Button.css";
 
 function Button({ value }) {
   return (
     <a href="#second">
       <button className="btn">
-        <div className="arrow">
-          <span></span>
+        <div className="btn__arrow">
           <div></div>
         </div>
         <span id="btn__text">{value}</span>
