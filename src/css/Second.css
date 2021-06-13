@@ -79,23 +79,23 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
 @keyframes anim {
   from {
-    margin-left: 100%;
-    width: 300%;
+    right: -1150px;
+    opacity: 0.3;
   }
   to {
-    margin-left: 0%;
-    width: 100%;
+    right: -1024px;
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes anim {
   from {
-    margin-left: -100%;
-    width: 200%;
+    right: -1150px;
+    opacity: 0.3;
   }
   to {
-    margin-left: 0%;
-    width: 100%;
+    right: -1024px;
+    opacity: 1;
   }
 }
 
@@ -104,6 +104,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   position: absolute;
   top: 116px;
   right: -1024px;
-  animation: anim 7s linear;
-  -webkit-animation: anim 7s linear;
+  animation: anim 4s ease-in-out;
+  -webkit-animation: anim 4s 1 ease-in-out;
 }

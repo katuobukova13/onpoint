@@ -14,7 +14,7 @@ function FirstSlide() {
     <section className="project" id="first">
       <Header />
       <FirstText />
-      <Button value={"Что дальше?"} />
+      <Button value={"Что дальше?"} idName="#second" id="btn__first" />
       <img className="img__sperm" src={pink_sperm} alt="pink_sperm" />
       <img className="img__top" alt="top" src={top_blue} />
       <img className="img__right" alt="right" src={right_blue} />

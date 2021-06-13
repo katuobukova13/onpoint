@@ -6,7 +6,8 @@ import second_sperms from "../img/second_sperms.png";
 
 function SecondSlide() {
   const myRef = createRef();
-  /*   const [state, setState] = useState({ value: 0 }); */
+  /*   const sectionRef = createRef();
+  const [img, setImg] = useState({ img: "" }); */
 
   /*   const onTouchMove = () => {
     const scrollTop = myRef.current.scrollTop;
@@ -16,7 +17,11 @@ function SecondSlide() {
     console.log(scrollTop);
   };  */
 
-  const handleChange = (e) => {
+  /*   useEffect(() => {
+    console.log(getComputedStyle(sectionRef.current));
+  }, []); */
+
+  const handleRange = (e) => {
     let scroll = e.target.value;
     const percent = scroll / 100;
     const height = myRef.current.scrollHeight;
@@ -45,8 +50,31 @@ function SecondSlide() {
     panel.scrollBy = percentage;
   };
  */
+
+  /*   const startStopAnimation = () => {
+    1024 < document.scrollWidth() && document.scrollWidth() < 2048 ? (
+      <img src={second_sperms} alt="sperms" className="second_sperms" />
+    ) : (
+      <></>
+    );
+  }; */
+
+  /*   setImg(
+    document.scrollWidth() > 1024 && document.scrollWidth() < 2048
+      ? true
+      : false
+  );
+  console.log(img); */
+  /*
+  useEffect(() => startStopAnimation(), []);
+ */
   return (
-    <section className="project" id="second">
+    <section
+      className="project"
+      id="second"
+      /*    ref={sectionRef} */
+      /*       startStopAnimation={startStopAnimation} */
+    >
       <Header />
       <div className="title">
         <p className="title__text">Текст</p>
@@ -59,7 +87,7 @@ function SecondSlide() {
           min="0"
           max="10"
           step="0.01"
-          onInput={handleChange}
+          onInput={handleRange}
           /*           onTouchMove={onTouchMove} */
         />
         <div className="spermtext" ref={myRef}>

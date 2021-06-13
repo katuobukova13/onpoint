@@ -1,0 +1,99 @@
+/* .2 {
+  background-image: url("5.png");
+  opacity: 0.929;
+  position: absolute;
+  left: 368px;
+  top: 311px;
+  width: 136px;
+  height: 138px;
+  z-index: 53;
+}
+
+.3 {
+  background-image: url("7.png");
+  opacity: 0.929;
+  position: absolute;
+  left: 21px;
+  top: 907px;
+  width: 66px;
+  height: 66px;
+  z-index: 51;
+}
+
+.1_pink {
+  background-image: url("1.png");
+  opacity: 0.878;
+  position: absolute;
+  left: 154px;
+  top: 425px;
+  width: 68px;
+  height: 68px;
+  z-index: 47;
+}
+
+.2_pink {
+  background-image: url("2.png");
+  opacity: 0.929;
+  position: absolute;
+  left: 373px;
+  top: 634px;
+  width: 225px;
+  height: 224px;
+  z-index: 46;
+}
+
+.4 {
+  background-image: url("4.png");
+  opacity: 0.929;
+  position: absolute;
+  left: 484px;
+  top: 1182px;
+  width: 123px;
+  height: 123px;
+  z-index: 44;
+}
+
+.5 {
+  background-image: url("6.png");
+  opacity: 0.929;
+  position: absolute;
+  left: 367px;
+  top: 1406px;
+  width: 285px;
+  height: 285px;
+  z-index: 52;
+}
+
+.3_pink {
+  background-image: url("8.png");
+  opacity: 0.929;
+  position: absolute;
+  left: 50px;
+  top: 1107px;
+  width: 149px;
+  height: 149px;
+  z-index: 50;
+}
+ */
+
+.bottle {
+  height: 712px;
+  display: block;
+  position: absolute;
+  left: 2060px;
+}
+
+.third__block {
+  background: #fff;
+  border: 1px solid #fff;
+  -webkit-box-shadow: -1px 0px 4px 0px rgba(34, 60, 80, 0.32);
+  box-shadow: -1px 0px 4px 0px rgba(34, 60, 80, 0.32);
+  border-radius: 50px;
+  padding-top: 25px;
+  padding-left: 35px;
+  padding-right: 32px;
+  padding-bottom: 25px;
+  line-height: 29px;
+  font-size: 22px;
+  font-weight: 300;
+}
