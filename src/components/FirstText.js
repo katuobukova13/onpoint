@@ -1,6 +1,6 @@
 import React from "react";
 
-function FirstText() {
+const FirstText = () => {
   return (
     <div className="text">
       <p className="text__hello">Привет,</p>
@@ -12,6 +12,6 @@ function FirstText() {
       <p className="text__main text__priority">ЗАДАНИЕ</p>
     </div>
   );
-}
+};
 
 export default FirstText;

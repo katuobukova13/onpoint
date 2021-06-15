@@ -9,12 +9,12 @@ import top_blue from "../img/top_blue.png";
 import FirstText from "./FirstText";
 import Onpoint from "./Onppoint";
 
-function FirstSlide() {
+const FirstSlide = () => {
   return (
     <section className="project" id="first">
       <Header />
       <FirstText />
-      <Button value={"Что дальше?"} idName="#second" id="btn__first" />
+      <Button text={"Что дальше?"} idName="#second" id="btn__first"/>
       <img className="img__sperm" src={pink_sperm} alt="pink_sperm" />
       <img className="img__top" alt="top" src={top_blue} />
       <img className="img__right" alt="right" src={right_blue} />
@@ -23,6 +23,6 @@ function FirstSlide() {
       <Onpoint />
     </section>
   );
-}
+};
 
 export default FirstSlide;

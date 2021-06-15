@@ -4,10 +4,20 @@
   background: rgb(255, 106, 159);
   border: none;
   border-radius: 65px;
+  font-size: 20px;
+  z-index: 48;
+}
+
+.link_1 {
   position: absolute;
   bottom: 216px;
   right: 165px;
-  font-size: 20px;
+}
+
+.link_3 {
+  position: absolute;
+  bottom: 121px;
+  left: 2740px;
 }
 
 .btn__arrow {
@@ -30,7 +40,7 @@
   background-color: #fff;
   left: 15.5px;
   display: block;
-  z-index: 3;
+  z-index: 53;
 }
 .btn__arrow div::after {
   content: "";
@@ -41,7 +51,7 @@
   right: -3.5px;
   background-color: #fff;
   transform: rotate(45deg);
-  z-index: 4;
+  z-index: 45;
 }
 .btn__arrow div::before {
   content: "";
@@ -53,7 +63,7 @@
   background-color: #fff;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   transform: rotate(-45deg);
-  z-index: 5;
+  z-index: 53;
 }
 
 #btn__text {
@@ -68,6 +78,6 @@
 }
 
 #btn__third {
-  right: -1950px;
+  right: -1976px;
   bottom: 114px;
 }

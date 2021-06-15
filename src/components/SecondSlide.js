@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, onScroll } from "react";
+import React, { useState, useRef } from "react";
 import Header from "./Header";
 import "../css/Second.css";
 import Onpoint from "./Onppoint";
@@ -6,12 +6,14 @@ import second_sperms from "../img/second_sperms.png";
 
 const MAX_SCROLL_VALUE = 100;
 
-function SecondSlide() {
+const SecondSlide = () => {
   const myRef = useRef();
   const [inputState, setInputState] = useState(0);
+  const [blockVisible, setBlockVisible] = useState(false);
 
   const handleChange = (e) => {
     let value = e.target.value;
+
     const {
       scrollHeight: containerScrollHeight,
       offsetHeight: containerOffsetHeight,
@@ -40,8 +42,14 @@ function SecondSlide() {
     setInputState(value);
   };
 
+  const handleMove = (e) => {
+    const element = e.target.getBoundingClientRect();
+    (element.width >= 600 && element.width <= 1024) ? setBlockVisible(true) : setBlockVisible(false);
+  }
+
+
   return (
-    <section className="project" id="second">
+    <section className="project" id="second" position={blockVisible} onTouchEnd={handleMove}>
       <Header />
       <div className="title">
         <p className="title__text">Текст</p>
@@ -89,10 +97,10 @@ function SecondSlide() {
           </p>
         </div>
       </div>
-      <img src={second_sperms} alt="sperms" className="second_sperms" />
+      <img src={second_sperms} alt="sperms" className={blockVisible ? "second_sperms" : "none"} />
       <Onpoint />
     </section>
   );
-}
+};
 
 export default SecondSlide;

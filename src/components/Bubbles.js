@@ -8,7 +8,7 @@ import pink_2 from "../img/3_pink_2.png";
 import pink_3 from "../img/3_pink_3.png";
 import "../css/Bubbles.css";
 
-function Bubbles() {
+const Bubbles = () => {
   return (
     <>
       <img src={bubble_1} alt="bubble" className="bubble bubble__1" />
@@ -21,6 +21,6 @@ function Bubbles() {
       <img src={pink_3} alt="bubble" className="bubble pink__3" />
     </>
   );
-}
+};
 
 export default Bubbles;

@@ -1,92 +1,18 @@
-/* .2 {
-  background-image: url("5.png");
-  opacity: 0.929;
-  position: absolute;
-  left: 368px;
-  top: 311px;
-  width: 136px;
-  height: 138px;
-  z-index: 53;
-}
-
-.3 {
-  background-image: url("7.png");
-  opacity: 0.929;
-  position: absolute;
-  left: 21px;
-  top: 907px;
-  width: 66px;
-  height: 66px;
-  z-index: 51;
-}
-
-.1_pink {
-  background-image: url("1.png");
-  opacity: 0.878;
-  position: absolute;
-  left: 154px;
-  top: 425px;
-  width: 68px;
-  height: 68px;
-  z-index: 47;
-}
-
-.2_pink {
-  background-image: url("2.png");
-  opacity: 0.929;
-  position: absolute;
-  left: 373px;
-  top: 634px;
-  width: 225px;
-  height: 224px;
-  z-index: 46;
-}
-
-.4 {
-  background-image: url("4.png");
-  opacity: 0.929;
-  position: absolute;
-  left: 484px;
-  top: 1182px;
-  width: 123px;
-  height: 123px;
-  z-index: 44;
-}
-
-.5 {
-  background-image: url("6.png");
-  opacity: 0.929;
-  position: absolute;
-  left: 367px;
-  top: 1406px;
-  width: 285px;
-  height: 285px;
-  z-index: 52;
-}
-
-.3_pink {
-  background-image: url("8.png");
-  opacity: 0.929;
-  position: absolute;
-  left: 50px;
-  top: 1107px;
-  width: 149px;
-  height: 149px;
-  z-index: 50;
-}
- */
-
 .bottle {
-  height: 713px;
+  height: 684px;
+  width: 300px;
   display: block;
   position: absolute;
   left: 2060px;
-  z-index: 5;
+  bottom: 0;
+  z-index: 50;
 }
 
 .third__blocks {
   display: flex;
-  margin-top: 43px;
+  margin-top: 54px;
+  width: 890px;
+  height: 270px;
 }
 
 .third__block {
@@ -95,42 +21,37 @@
   box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
   border-radius: 50px;
   padding-top: 45px;
-  padding-left: 50px;
+  padding-left: 296px;
   padding-right: 37px;
   padding-bottom: 45px;
   font-weight: 300;
-  font-size: 22px;
+  font-size: 20px;
   color: rgb(46, 46, 46);
-  line-height: 1.2;
-}
-
-.third__block:first-child {
-  width: 390px;
-  margin-left: 170px;
-  padding-left: 110px;
-  height: 260px;
+  line-height: 1.4;
+  width: 585px;
 }
 
 .third__block:last-child {
   width: 262px;
   height: 140px;
   margin-left: 40px;
+  padding-left: 55px;
 }
 
 .third__titles {
   display: flex;
   flex-direction: column;
-  margin-top: 130px;
+  margin-top: 112px;
   text-transform: uppercase;
   font-size: 26px;
   letter-spacing: 2px;
-  margin-left: 290px;
+  margin-left: 282px;
 }
 
 .third__title {
   font-family: DIN Pro;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 28px;
 }
 .third__title:last-child {
   font-family: DIN Pro;
@@ -141,4 +62,17 @@
 
 .third__title span {
   font-weight: 800;
+}
+
+.third__icon {
+  position: absolute;
+  height: 55px;
+  top: 357px;
+  left: 2785px;
+}
+
+.third__icon:first-child {
+  height: 57px;
+  left: 2399px;
+  top: 356px;
 }
