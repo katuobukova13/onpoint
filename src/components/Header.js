@@ -1,9 +1,10 @@
 import React from "react";
-import "../Header.css";
+import "../css/Header.css";
 import home from "../icons/home-2.svg";
 
-function Header() {
+const Header = () => {
   const svgPath = `${home}#svgView(preserveAspectRatio(none))`;
+
   return (
     <header className="header">
       <nav className="nav">
@@ -18,6 +19,6 @@ function Header() {
       </nav>
     </header>
   );
-}
+};
 
 export default Header;

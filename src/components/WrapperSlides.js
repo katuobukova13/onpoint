@@ -4,14 +4,14 @@ import SecondSlide from "./SecondSlide";
 import ThirdSlide from "./ThirdSlide";
 import "../App.css";
 
-function WrapperSlides() {
+const WrapperSlides = () => {
   return (
     <div className="projects">
       <FirstSlide />
-      <SecondSlide />
+      <SecondSlide/>
       <ThirdSlide />
     </div>
   );
-}
+};
 
 export default WrapperSlides;

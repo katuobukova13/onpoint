@@ -1,0 +1,78 @@
+.bottle {
+  height: 684px;
+  width: 300px;
+  display: block;
+  position: absolute;
+  left: 2060px;
+  bottom: 0;
+  z-index: 50;
+}
+
+.third__blocks {
+  display: flex;
+  margin-top: 54px;
+  width: 890px;
+  height: 270px;
+}
+
+.third__block {
+  background: #fff;
+  border: 1px solid #fff;
+  box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
+  border-radius: 50px;
+  padding-top: 45px;
+  padding-left: 296px;
+  padding-right: 37px;
+  padding-bottom: 45px;
+  font-weight: 300;
+  font-size: 20px;
+  color: rgb(46, 46, 46);
+  line-height: 1.4;
+  width: 585px;
+}
+
+.third__block:last-child {
+  width: 262px;
+  height: 140px;
+  margin-left: 40px;
+  padding-left: 55px;
+}
+
+.third__titles {
+  display: flex;
+  flex-direction: column;
+  margin-top: 112px;
+  text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 2px;
+  margin-left: 282px;
+}
+
+.third__title {
+  font-family: DIN Pro;
+  font-weight: 300;
+  font-size: 28px;
+}
+.third__title:last-child {
+  font-family: DIN Pro;
+  font-weight: 300;
+  font-size: 100px;
+  letter-spacing: 6px;
+}
+
+.third__title span {
+  font-weight: 800;
+}
+
+.third__icon {
+  position: absolute;
+  height: 55px;
+  top: 357px;
+  left: 2785px;
+}
+
+.third__icon:first-child {
+  height: 57px;
+  left: 2399px;
+  top: 356px;
+}
