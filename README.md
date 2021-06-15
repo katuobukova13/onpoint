@@ -1,4 +1,4 @@
-!!! test for chrome 1024x768 
+# IMPORTANT : test for chrome 1024x768 
 
 # Getting Started with Create React App
 
