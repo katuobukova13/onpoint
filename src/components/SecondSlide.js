@@ -6,11 +6,23 @@ import second_sperms from "../img/second_sperms.png";
 
 const MAX_SCROLL_VALUE = 100;
 
-const SecondSlide = () => {
+const SecondSlide = ({ current }) => {
   const myRef = useRef();
   const [inputState, setInputState] = useState(0);
+  const [textState, setTextState] = useState(0);
   const [blockVisible, setBlockVisible] = useState(false);
 
+  /*   let translate =
+    { current } > 1
+      ? "translate3d(-1024px,0, 1px)"
+      : { current } < 1
+      ? "translate3d(1024px ,0, 1px)"
+      : "translate3d(0, 0, 1px)";
+  const styleTranslate = {
+    transform: translate,
+    transition: "0.5s",
+  };
+ */
   const handleChange = (e) => {
     let value = e.target.value;
 
@@ -42,14 +54,26 @@ const SecondSlide = () => {
     setInputState(value);
   };
 
+  const handleTouch = (e) => {
+    let value = e.target.value;
+    console.log(value);
+  };
+
   const handleMove = (e) => {
     const element = e.target.getBoundingClientRect();
-    (element.width >= 600 && element.width <= 1024) ? setBlockVisible(true) : setBlockVisible(false);
-  }
-
+    /*     element.width >= 600 && element.width <= 1024
+      ? setBlockVisible(true)
+      : setBlockVisible(false); */
+  };
 
   return (
-    <section className="project" id="second" position={blockVisible} onTouchEnd={handleMove}>
+    <section
+      className="project"
+      id="second"
+      /*       section={blockVisible} */
+      onTouchEnd={handleMove}
+      /*       style={styleTranslate} */
+    >
       <Header />
       <div className="title">
         <p className="title__text">Текст</p>
@@ -63,7 +87,12 @@ const SecondSlide = () => {
           value={inputState}
           max={MAX_SCROLL_VALUE}
         />
-        <div className="spermtext" ref={myRef}>
+        <div
+          className="spermtext"
+          ref={myRef}
+          onTouchMove={handleTouch}
+          value={textState}
+        >
           <p className="spermtext__paragraph">
             <span className="spermtext__name">Сперматозoид</span> (от др.-греч.
             σπέρμα род. п. σπέρματος здесь «сперма» + ζωή «жизнь» + εἶδος «вид,
@@ -97,7 +126,11 @@ const SecondSlide = () => {
           </p>
         </div>
       </div>
-      <img src={second_sperms} alt="sperms" className={blockVisible ? "second_sperms" : "none"} />
+      <img
+        src={second_sperms}
+        alt="sperms"
+        className={blockVisible ? "second_sperms" : "none"}
+      />
       <Onpoint />
     </section>
   );
