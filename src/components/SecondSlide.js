@@ -6,7 +6,7 @@ import second_sperms from "../img/second_sperms.png";
 
 const MAX_SCROLL_VALUE = 100;
 
-const SecondSlide = ({ current }) => {
+const SecondSlide = ({ currentPage }) => {
   const myRef = useRef();
   const [inputState, setInputState] = useState(0);
   const [textState, setTextState] = useState(0);
@@ -55,25 +55,12 @@ const SecondSlide = ({ current }) => {
   };
 
   const handleTouch = (e) => {
-    let value = e.target.value;
-    console.log(value);
-  };
-
-  const handleMove = (e) => {
-    const element = e.target.getBoundingClientRect();
-    /*     element.width >= 600 && element.width <= 1024
-      ? setBlockVisible(true)
-      : setBlockVisible(false); */
+    const pos = e.target;
+    console.log(pos);
   };
 
   return (
-    <section
-      className="project"
-      id="second"
-      /*       section={blockVisible} */
-      onTouchEnd={handleMove}
-      /*       style={styleTranslate} */
-    >
+    <section className="project" id="second" currentPage={currentPage}>
       <Header />
       <div className="title">
         <p className="title__text">Текст</p>
@@ -91,7 +78,7 @@ const SecondSlide = ({ current }) => {
           className="spermtext"
           ref={myRef}
           onTouchMove={handleTouch}
-          value={textState}
+          position={textState}
         >
           <p className="spermtext__paragraph">
             <span className="spermtext__name">Сперматозoид</span> (от др.-греч.
@@ -129,7 +116,7 @@ const SecondSlide = ({ current }) => {
       <img
         src={second_sperms}
         alt="sperms"
-        className={blockVisible ? "second_sperms" : "none"}
+        className={currentPage ? "second_sperms" : "none"}
       />
       <Onpoint />
     </section>
