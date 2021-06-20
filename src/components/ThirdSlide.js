@@ -9,7 +9,7 @@ import Toast from "./Toast";
 import plate from "../img/plate.png";
 import schedule from "../img/schedule.png";
 
-const ThirdSlide = () => {
+const ThirdSlide = ({ currentPage }) => {
   const [toastState, setToastState] = useState(false);
 
   const openToast = () => {
@@ -17,7 +17,10 @@ const ThirdSlide = () => {
   };
 
   return (
-    <section className={toastState === true ? "project__dark" : "project"}>
+    <section
+      className={toastState === true ? "project__dark" : "project"}
+      currentPage={currentPage}
+    >
       <Header />
       <img src={bottle} alt="bottle" className="bottle" />
       <div className="third__titles">
