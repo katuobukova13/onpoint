@@ -41,7 +41,7 @@ const WrapperSlides = () => {
     >
       <div
         className="line"
-        /*        style={{ transform: `translateX(${currentPage * -100}vw)` }} */
+        style={{ transform: `translateX(${currentPage * -100}vw)` }}
         swipe={swipe}
       >
         <FirstSlide currentPage={currentPage} />
