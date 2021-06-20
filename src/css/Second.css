@@ -79,22 +79,22 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
 @keyframes fadeInRight {
   0% {
-  opacity: 0;
-  transform: translate3d(100%, 0, 0);
-  transform: translateX(30%);
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+    transform: translateX(30%);
   }
   100% {
-  opacity: 1;
-  transform: none;
-  transform: translateX(0);
+    opacity: 1;
+    transform: none;
+    transform: translateX(0);
   }
- }
+}
 
 .second_sperms {
   height: 610px;
   position: absolute;
   top: 116px;
-  right: -1024px;
+  /*   right: -1024px; */
   animation: fadeInRight 4s ease-in-out;
 }
 

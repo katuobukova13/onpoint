@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   scroll-behavior: smooth;
   overflow-x: scroll;
   position: absolute;
@@ -21,12 +21,15 @@ body {
 }
 
 .projects {
-  display: flex;
-  flex-direction: row;
   width: 300vw;
 }
 .projects::-webkit-scrollbar {
   display: none;
+}
+.line {
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
 
 .project {
@@ -125,7 +128,8 @@ body {
   position: absolute;
   width: 200px;
   bottom: 0px;
-  right: 258px;
+  /*   right: 258px; */
+  left: 503px;
   animation: anim_bottom 3s ease-in infinite alternate;
 }
 
@@ -141,7 +145,8 @@ body {
 .img__right {
   position: absolute;
   height: 109px;
-  right: 92px;
+  /*   right: 92px; */
+  left: 750px;
   top: 214px;
   animation: anim_right 10s linear infinite;
 }
@@ -160,7 +165,8 @@ body {
   width: 62px;
   height: 57px;
   top: 60px;
-  right: 249px;
+  /*   right: 249px; */
+  left: 649px;
   animation: anim_top 7s linear infinite alternate;
 }
 

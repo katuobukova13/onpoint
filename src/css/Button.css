@@ -10,8 +10,10 @@
 
 .link_1 {
   position: absolute;
-  bottom: 216px;
-  right: 165px;
+  /*   bottom: 216px;
+  right: 165px; */
+  bottom: 220px;
+  left: 617px;
 }
 
 .link_3 {

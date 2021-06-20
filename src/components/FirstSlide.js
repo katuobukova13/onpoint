@@ -9,12 +9,20 @@ import top_blue from "../img/top_blue.png";
 import FirstText from "./FirstText";
 import Onpoint from "./Onppoint";
 
-const FirstSlide = () => {
+const FirstSlide = (props) => {
+  const translate =
+    props.current > 0
+      ? "translate3d(1024px, 0, 1px)"
+      : "translate3d(0, 0px, 1px)";
+  const styleTranslate = {
+    transform: translate,
+    transition: "0.5s",
+  };
   return (
     <section className="project" id="first">
       <Header />
       <FirstText />
-      <Button text={"Что дальше?"} idName="#second" id="btn__first"/>
+      <Button text={"Что дальше?"} idName="#second" id="btn__first" />
       <img className="img__sperm" src={pink_sperm} alt="pink_sperm" />
       <img className="img__top" alt="top" src={top_blue} />
       <img className="img__right" alt="right" src={right_blue} />
