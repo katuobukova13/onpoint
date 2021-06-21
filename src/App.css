@@ -6,6 +6,7 @@
 body {
   overflow: hidden;
   height: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 .container {
@@ -20,19 +21,15 @@ body {
   display: none;
 }
 
-.projects {
-  width: 300vw;
-}
-.projects::-webkit-scrollbar {
-  display: none;
-}
 .line {
   display: flex;
   flex-direction: row;
+  width: max-content;
   position: relative;
 }
 
 .project {
+  position: relative;
   display: inline-block;
   width: 100vw;
   height: 100vh;
@@ -41,7 +38,7 @@ body {
   padding-left: 66px;
 }
 .project::-webkit-scrollbar {
-  width: 0px;
+  width: 0;
 }
 
 .project:nth-child(1) {
@@ -92,10 +89,10 @@ body {
 }
 
 .img__sperm {
-  position: absolute;
-  bottom: 511px;
-  left: 422px;
-  height: 90px;
+  position: relative;
+  bottom: 296px;
+  left: 360px;
+  height: 92px;
 }
 
 @keyframes anim_left {
@@ -108,10 +105,10 @@ body {
 }
 
 .img__left {
-  position: absolute;
+  position: relative;
   height: 63px;
-  left: 28px;
-  bottom: 190px;
+  left: -50px;
+  bottom: 318px;
   animation: anim_left 5s linear 0s infinite alternate;
 }
 
@@ -125,11 +122,10 @@ body {
 }
 
 .img__bottom {
-  position: absolute;
   width: 200px;
-  bottom: 0px;
-  /*   right: 258px; */
-  left: 503px;
+  bottom: 58px;
+  position: relative;
+  left: 492px;
   animation: anim_bottom 3s ease-in infinite alternate;
 }
 
@@ -143,11 +139,10 @@ body {
 }
 
 .img__right {
-  position: absolute;
+  position: relative;
   height: 109px;
-  /*   right: 92px; */
   left: 750px;
-  top: 214px;
+  bottom: 399px;
   animation: anim_right 10s linear infinite;
 }
 
@@ -161,11 +156,10 @@ body {
 }
 
 .img__top {
-  position: absolute;
+  position: relative;
   width: 62px;
   height: 57px;
-  top: 60px;
-  /*   right: 249px; */
+  bottom: 507px;
   left: 649px;
   animation: anim_top 7s linear infinite alternate;
 }

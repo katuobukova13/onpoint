@@ -3,7 +3,7 @@
   width: 300px;
   display: block;
   position: absolute;
-  left: 2060px;
+  right: 704px;
   bottom: 0;
   z-index: 50;
 }
@@ -13,6 +13,7 @@
   margin-top: 54px;
   width: 890px;
   height: 270px;
+  margin-left: 55px;
 }
 
 .third__block {
@@ -21,20 +22,20 @@
   box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
   border-radius: 50px;
   padding-top: 45px;
-  padding-left: 296px;
+  padding-left: 245px;
   padding-right: 37px;
   padding-bottom: 45px;
   font-weight: 300;
   font-size: 20px;
   color: rgb(46, 46, 46);
   line-height: 1.4;
-  width: 585px;
+  width: 525px;
 }
 
 .third__block:last-child {
   width: 262px;
   height: 140px;
-  margin-left: 40px;
+  margin-left: 45px;
   padding-left: 55px;
 }
 
@@ -68,11 +69,11 @@
   position: absolute;
   height: 55px;
   top: 357px;
-  left: 2785px;
+  left: 749px;
 }
 
 .third__icon:first-child {
   height: 57px;
-  left: 2399px;
-  top: 356px;
+  left: 360px;
+  top: 352px;
 }
