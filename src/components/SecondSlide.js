@@ -10,19 +10,7 @@ const SecondSlide = ({ currentPage }) => {
   const myRef = useRef();
   const [inputState, setInputState] = useState(0);
   const [textState, setTextState] = useState(0);
-  const [blockVisible, setBlockVisible] = useState(false);
 
-  /*   let translate =
-    { current } > 1
-      ? "translate3d(-1024px,0, 1px)"
-      : { current } < 1
-      ? "translate3d(1024px ,0, 1px)"
-      : "translate3d(0, 0, 1px)";
-  const styleTranslate = {
-    transform: translate,
-    transition: "0.5s",
-  };
- */
   const handleChange = (e) => {
     let value = e.target.value;
 
@@ -51,12 +39,34 @@ const SecondSlide = ({ currentPage }) => {
       behavior: "smooth",
     });
 
+    console.log(`diff: ${scrollDifference}`);
+
     setInputState(value);
   };
 
-  const handleTouch = (e) => {
-    const pos = e.target;
-    console.log(pos);
+  const handleTouchMove = (e) => {
+    const value = textState;
+
+    const {
+      scrollHeight: containerScrollHeight,
+      offsetHeight: containerOffsetHeight,
+      scrollTop: containerScrollTop,
+    } = myRef.current;
+
+    const scrollValue =
+      containerScrollHeight -
+      containerOffsetHeight * (value / MAX_SCROLL_VALUE);
+
+    const textScroll = Math.floor(scrollValue - containerScrollTop);
+
+    myRef.current.scrollBy({
+      top: textScroll,
+      behavior: "smooth",
+    });
+
+    console.log(`text: ${textScroll}`);
+
+    setTextState(textScroll);
   };
 
   return (
@@ -77,8 +87,8 @@ const SecondSlide = ({ currentPage }) => {
         <div
           className="spermtext"
           ref={myRef}
-          onTouchMove={handleTouch}
-          position={textState}
+          onTouchMove={handleTouchMove}
+          text={textState}
         >
           <p className="spermtext__paragraph">
             <span className="spermtext__name">Сперматозoид</span> (от др.-греч.
