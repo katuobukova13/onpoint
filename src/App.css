@@ -12,7 +12,7 @@ body {
 .container {
   width: 100%;
   scroll-behavior: smooth;
-  overflow-x: scroll;
+  overflow-x: hidden;
   position: absolute;
   scrollbar-width: none;
   -ms-overflow-style: none;
