@@ -1,4 +1,5 @@
 import React from "react";
+import "./FirstText.css";
 
 const FirstText = () => {
   return (

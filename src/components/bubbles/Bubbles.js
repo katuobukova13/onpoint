@@ -1,12 +1,12 @@
-import bubble_1 from "../img/3_blue_1.png";
-import bubble_2 from "../img/3_blue_2.png";
-import bubble_3 from "../img/3_blue_3.png";
-import bubble_4 from "../img/3_blue_4.png";
-import bubble_5 from "../img/3_blue_5.png";
-import pink_1 from "../img/3_pink_1.png";
-import pink_2 from "../img/3_pink_2.png";
-import pink_3 from "../img/3_pink_3.png";
-import "../css/Bubbles.css";
+import bubble_1 from "../../img/3_blue_1.png";
+import bubble_2 from "../../img/3_blue_2.png";
+import bubble_3 from "../../img/3_blue_3.png";
+import bubble_4 from "../../img/3_blue_4.png";
+import bubble_5 from "../../img/3_blue_5.png";
+import pink_1 from "../../img/3_pink_1.png";
+import pink_2 from "../../img/3_pink_2.png";
+import pink_3 from "../../img/3_pink_3.png";
+import "./Bubbles.css";
 
 const Bubbles = () => {
   return (

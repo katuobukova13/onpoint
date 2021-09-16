@@ -1,0 +1,27 @@
+.text {
+  margin-top: 115px;
+}
+
+.text__hello {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 32px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.text__main {
+  font-weight: 300;
+  font-size: 100px;
+  letter-spacing: 8px;
+}
+
+.text__not {
+  font-weight: 800;
+}
+
+.text__priority {
+  position: absolute;
+  z-index: 2;
+}

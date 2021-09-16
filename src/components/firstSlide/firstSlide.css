@@ -1,0 +1,108 @@
+.slide {
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  padding-left: 66px;
+}
+.slide::-webkit-scrollbar {
+  width: 0;
+}
+
+.slide:nth-child(1) {
+  background-image: url(../../img/bg1.png);
+}
+.slide:nth-child(2) {
+  background-image: url(../../img/bg2.png);
+}
+.slide:nth-child(3) {
+  background-image: url(../../img/bg3.png);
+}
+
+.slide__dark {
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  padding-left: 66px;
+  background-image: url(../../img/bg3_dark.png);
+}
+
+.img__sperm {
+  position: relative;
+  bottom: 296px;
+  left: 360px;
+  height: 92px;
+}
+
+@keyframes anim_left {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    transform: translateX(50px) translateY(40px);
+  }
+}
+
+.img__left {
+  position: relative;
+  height: 63px;
+  left: -50px;
+  bottom: 318px;
+  animation: anim_left 5s linear 0s infinite alternate;
+}
+
+@keyframes anim_bottom {
+  from {
+    transform: scale(1) translateZ(0);
+  }
+  to {
+    transform: scale(1.2) translateZ(-9.3px);
+  }
+}
+
+.img__bottom {
+  width: 200px;
+  bottom: 58px;
+  position: relative;
+  left: 492px;
+  animation: anim_bottom 3s ease-in infinite alternate;
+}
+
+@keyframes anim_right {
+  from {
+    transform: rotate(0deg) translateX(35px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(35px) rotate(-360deg);
+  }
+}
+
+.img__right {
+  position: relative;
+  height: 109px;
+  left: 750px;
+  bottom: 399px;
+  animation: anim_right 10s linear infinite;
+}
+
+@keyframes anim_top {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    transform: translateX(50px) translateY(50px);
+  }
+}
+
+.img__top {
+  position: relative;
+  width: 62px;
+  height: 57px;
+  bottom: 507px;
+  left: 649px;
+  animation: anim_top 7s linear infinite alternate;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import WrapperSlides from "./components/WrapperSlides";
+import WrapperSlides from "./components/wrapperSlider/WrapperSlides";
 import "./App.css";
 
 function App() {

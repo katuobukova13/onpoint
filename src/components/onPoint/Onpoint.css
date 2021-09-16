@@ -1,0 +1,7 @@
+.onpoint {
+  display: block;
+  position: absolute;
+  width: 57px;
+  bottom: 16px;
+  z-index: 100;
+}

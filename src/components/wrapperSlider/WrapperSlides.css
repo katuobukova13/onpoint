@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  position: relative;
+}

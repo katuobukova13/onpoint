@@ -8,13 +8,13 @@
   z-index: 48;
 }
 
-.link_1 {
+#btn__first {
   position: absolute;
   bottom: 220px;
-  left: 617px;
+  left: 595px;
 }
 
-.link_3 {
+#btn__third {
   position: absolute;
   bottom: 121px;
   left: 690px;
