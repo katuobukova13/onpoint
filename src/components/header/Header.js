@@ -1,18 +1,22 @@
 import React from "react";
-import "../css/Header.css";
-import home from "../icons/home-2.svg";
+import "./Header.css";
+import home from "../../icons/home-2.svg";
 
-const Header = () => {
+const Header = ({ currentpage, setCurrentPage }) => {
   const svgPath = `${home}#svgView(preserveAspectRatio(none))`;
+
+  const goToFirstSlide = () => {
+    setCurrentPage(0);
+  };
 
   return (
     <header className="header">
       <nav className="nav">
         <ul className="menu">
           <li className="menu__item">
-            <a href="#first" className="menu__link">
+            <button className="menu__link" onClick={() => goToFirstSlide()}>
               <img src={svgPath} width="24px" height="24px" alt="home" />
-            </a>
+            </button>
           </li>
           <li className="menu__item">PROJECT</li>
         </ul>
@@ -22,5 +26,3 @@ const Header = () => {
 };
 
 export default Header;
-
-

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import "../css/Toast.css";
-import del from "../icons/delete.png";
-import Pagination from "./Pagination";
-import "../css/Pagination.css";
+import del from "../../icons/delete.png";
+import Pagination from "../pagination/Pagination";
+import "./Toast.css";
 
 const PAGE_LIMIT = 3;
 
@@ -16,10 +15,10 @@ const ADVANTAGES = [
 ];
 
 const Toast = ({ toastState, setToastState }) => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentpage, setCurrentPage] = useState(1);
   const [advantagesPerPage] = useState(PAGE_LIMIT);
 
-  const indexOfLastAdvantage = currentPage * PAGE_LIMIT;
+  const indexOfLastAdvantage = currentpage * PAGE_LIMIT;
   const indexOfFirstAdvantage = indexOfLastAdvantage - PAGE_LIMIT;
   const currentAdvantages = ADVANTAGES.slice(
     indexOfFirstAdvantage,
@@ -44,10 +43,17 @@ const Toast = ({ toastState, setToastState }) => {
         </h2>
       </div>
       <ul className="toast__list">
-        {currentAdvantages.map((advantage) => (
+        {currentAdvantages.map((advantage, key) => (
           <>
-            <li className="toast__number">{advantage.id}</li>
-            <li className="toast__advantage">{advantage.text}</li>
+            <li className="toast__number" key={key + advantage.id}>
+              {advantage.id}
+            </li>
+            <li
+              className="toast__advantage"
+              key={`${key} ${advantage.id} text`}
+            >
+              {advantage.text}
+            </li>
           </>
         ))}
       </ul>
@@ -55,7 +61,7 @@ const Toast = ({ toastState, setToastState }) => {
         advantagesPerPage={advantagesPerPage}
         totalAdvantages={ADVANTAGES.length}
         paginate={paginate}
-        currentPage={currentPage}
+        currentpage={currentpage}
         setCurrentPage={setCurrentPage}
       />
     </div>

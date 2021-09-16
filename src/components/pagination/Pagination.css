@@ -19,12 +19,13 @@
   margin-left: 7px;
 }
 
-.active {
+.page__link-active {
   background-color: rgb(255, 106, 159);
 }
 
 .page__arrow {
-  height: 7px;
+  border: none;
+  background-color: transparent;
   margin-right: 15px;
   margin-left: 15px;
 }

@@ -1,12 +1,12 @@
 import React, { useState, useRef } from "react";
-import Header from "./Header";
-import "../css/Second.css";
-import Onpoint from "./Onppoint";
-import second_sperms from "../img/second_sperms.png";
+import Header from "../header/Header";
+import "./Second.css";
+import Onpoint from "../onPoint/Onppoint";
+import second_sperms from "../../img/second_sperms.png";
 
 const MAX_SCROLL_VALUE = 100;
 
-const SecondSlide = ({ currentPage }) => {
+const SecondSlide = ({ currentpage, setCurrentPage }) => {
   const myRef = useRef();
   const [inputState, setInputState] = useState(0);
   const [textState, setTextState] = useState(0);
@@ -26,20 +26,10 @@ const SecondSlide = ({ currentPage }) => {
 
     const scrollDifference = Math.ceil(scrollValue - containerScrollTop);
 
-    console.log({
-      step: containerScrollHeight / MAX_SCROLL_VALUE,
-      maxScroll: containerScrollHeight - containerOffsetHeight,
-      value,
-      currentScroll: containerScrollTop,
-      scrollBy: scrollDifference,
-    });
-
     myRef.current.scrollBy({
       top: scrollDifference,
       behavior: "smooth",
     });
-
-    console.log(`diff: ${scrollDifference}`);
 
     setInputState(value);
   };
@@ -64,14 +54,12 @@ const SecondSlide = ({ currentPage }) => {
       behavior: "smooth",
     });
 
-    console.log(`text: ${textScroll}`);
-
     setTextState(textScroll);
   };
 
   return (
-    <section className="project" id="second" currentPage={currentPage}>
-      <Header />
+    <section className="slide" id="second" currentpage={currentpage}>
+      <Header currentpage={currentpage} setCurrentPage={setCurrentPage} />
       <div className="title">
         <p className="title__text">Текст</p>
         <p className="title__text">сообщения</p>
@@ -126,7 +114,7 @@ const SecondSlide = ({ currentPage }) => {
       <img
         src={second_sperms}
         alt="sperms"
-        className={currentPage ? "second_sperms" : "none"}
+        className={currentpage === 1 ? "second_sperms" : "none"}
       />
       <Onpoint />
     </section>

@@ -1,12 +1,13 @@
 import React from "react";
-import left_arrow from "../icons/left_arrow.png";
-import right_arrow from "../icons/right_arrow.png";
+import left_arrow from "../../icons/left_arrow.png";
+import right_arrow from "../../icons/right_arrow.png";
+import "./Pagination.css";
 
 const Pagination = ({
   advantagesPerPage,
   totalAdvantages,
   paginate,
-  currentPage,
+  currentpage,
   setCurrentPage,
 }) => {
   const pages = [];
@@ -18,20 +19,23 @@ const Pagination = ({
   return (
     <nav>
       <div className="pagination">
-        <a className="page__arrow" onClick={() => paginate(1)}>
+        <button className="page__arrow" onClick={() => paginate(1)}>
           <img src={left_arrow} alt="arrow" />
-        </a>
-        {pages.map((page) => (
-          <a
+        </button>
+        {pages.map((page, key) => (
+          <button
             onClick={() => paginate(page)}
             className={
-              currentPage === page ? "page__link active" : "page__link"
+              currentpage === page
+                ? "page__link page__link-active"
+                : "page__link"
             }
-          ></a>
+            key={key}
+          ></button>
         ))}
-        <a className="page__arrow" onClick={() => paginate(2)}>
+        <button className="page__arrow" onClick={() => paginate(2)}>
           <img src={right_arrow} alt="arrow" />
-        </a>
+        </button>
       </div>
     </nav>
   );

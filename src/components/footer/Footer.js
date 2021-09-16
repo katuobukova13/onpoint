@@ -1,5 +1,5 @@
 import React from "react";
-import onPoint from "../img/onpoint.png";
+import onPoint from "../../img/onpoint.png";
 
 const Footer = () => {
   return (
